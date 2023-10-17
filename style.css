@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --p-color: #464646;
+    --p-font: Jaldi, sans-serif;
+    --pinkColor: #fd746c;
+}
+
+
+
+
+
+header {
+
+    border-bottom: 1px solid rgb(212, 208, 208);
+}
+
+.top-header {
+
+    background-color: #333333;
+}
+
+.in-wrapper {
+    display: flex;
+    color: #F4F4F4;
+    font-family: var(--p-font);
+    gap: 20px;
+    justify-content: end;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.top-header p {
+    border-inline: 1px solid black;
+    padding-inline: 20px;
+    font-size: 14px;
+}
+
+.top-header p:last-child {
+    border-left: unset;
+}
+
+.top-header p span {
+
+    display: inline-block;
+    width: 38px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    margin: 0;
+}
+
+header img {
+    width: 100%;
+
+}
+
+header .logo {
+
+    max-width: 200px;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    /* gap: 30px; */
+    font-family: Jaldi, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav ul a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+
+    padding: 30px 20px;
+}
+
+/* drop-dwon icon */
+.fa-thin {
+    padding-left: 3px;
+    vertical-align: middle;
+}
+
+header nav ul li:last-child a {
+    color: var(--pinkColor);
+}
+
+header nav ul li:hover {
+    color: #fff;
+    background-color: #38ADBD;
+}
+
+header nav ul li:hover a {
+    color: white;
+}
+
+header nav .call-icon {
+    background-color: #38ADBD;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+    display: none;
+    padding: 5px;
+
+}
+
+header nav .call-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+header nav button {
+    display: none;
+}
+
+/* main section have started */
+main {
+
+    position: relative;
+    padding: 50px 0 0 0;
+    min-height: 630px;
+    height: calc(100vh - 22vh);
+
+}
+
+.content-wrapper {
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .content-wrapper p {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--p-font);
+    color: var(--p-color);
+
+}
+
+main #particles-js {
+    width: 100%;
+    height: 100%;
+}
+
+main .content-wrapper .btn {
+    display: flex;
+    gap: 20px;
+}
+
+main .content-wrapper .btn button {
+    padding: 15px 35px;
+    color: white;
+    text-transform: capitalize;
+    border: 2px solid transparent;
+    background-color: var(--pinkColor);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: color ease-in-out 0.5s;
+}
+
+main .content-wrapper h1 {
+    font-family: 'Stardos Stencil', cursive;
+    color: #4c4c4c;
+    font-size: 40px;
+}
+
+main .content-wrapper .btn button:hover {
+    background: linear-gradient(to right, #ff9068, #fd746c);
+
+}
+
+main .content-wrapper .btn button:focus {
+    border: 2px solid black;
+}
+
+nav ul li .material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+/* about section style have started */
+.about {
+    background: url(src/about_us_bg.png);
+    padding: 100px 0;
+    background-size: cover;
+    min-height: 500px;
+    background-position: center;
+}
+
+.about .wrapper {
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: auto;
+
+}
+
+.about .wrapper h2 {
+    font-size: 2.5rem;
+    font-family: arial;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about .wrapper h2 span {
+    color: var(--pinkColor);
+}
+
+.about .wrapper .content {
+    max-width: 750px;
+    width: 100%;
+}
+
+.about .wrapper p {
+    font-family: arial;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.about .icons {
+    background-color: rgba(255, 255, 255, 0.338);
+    padding: 30px 50px;
+    margin-top: 70px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.about .icons img {
+    width: 105px;
+    object-fit: contain;
+}
+
+.clientNeeds {
+    padding: 100px 0;
+    position: relative;
+}
+
+.clientNeeds #particles-js2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #38ADBD;
+    top: 0;
+
+}
+
+.clientNeeds .wrapper {
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+
+}
+
+.clientNeeds .content h2 {
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+}
+
+.clientNeeds .content p {
+    font-family: var(--p-font);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.clientNeeds .cards {
+    display: flex;
+    flex-grow: 1;
+    gap: 25px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clientNeeds .card {
+    background-color: white;
+
+    width: 340px;
+
+    flex-shrink: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+.clientNeeds .card:hover {
+    transform: scale(0.9);
+}
+
+.clientNeeds .card h3 {
+    color: #333;
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.clientNeeds .card button {
+    padding: 5px 6px;
+    color: white;
+    font-family: var(--p-font);
+    border: 2px solid transparent;
+    background-color: var(--pinkColor);
+    border-radius: 5px;
+    transition: color ease-in-out 0.5s;
+}
+
+.services {
+    padding: 100px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.services h2 {
+    color: #031B3F;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.services p {
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #131313;
+    line-height: 2;
+}
+
+/*  aspect section have started */
+.aspect {
+
+
+    background: linear-gradient(180deg, rgba(56, 173, 189, 1) 50%, rgba(141, 208, 217, 1) 79%, rgba(237, 243, 245, 1) 100%);
+    ;
+}
+
+.aspect .wrapper {
+    max-width: 1140px;
+    padding: 100px 30px;
+    margin: 0 auto;
+}
+
+.aspect .content {
+    color: #fff;
+    text-align: center;
+}
+
+.aspect h2 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.aspect .content p {
+    font-size: 20px;
+    font-family: var(--p-font);
+    margin: 20px 0;
+    line-height: 30px;
+}
+
+.aspect .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 60px;
+
+}
+
+.aspect .card {
+    background-color: #F4F4F4;
+    padding: 40px 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 520px;
+    box-shadow: 5px 7px 8px rgb(0 0 0 / 30%);
+    transition: all ease 0.3s;
+}
+
+.aspect .card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 7px 5px rgb(54 53 53 / 58%);
+}
+
+.aspect .card h3 {
+    font-family: 'arial';
+    font-weight: 700;
+    font-size: 20px;
+
+    line-height: 23px;
+    margin-left: 23px;
+}
+
+.aspect .card p {
+    font-family: 'arial';
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.aspect .cards .img {
+    display: flex;
+
+}
+
+.aspect .card img {
+    width: 50px;
+    object-fit: contain;
+}
+
+.aspect .card a {
+    text-decoration: none;
+    color: #0759d3;
+    font-weight: 600;
+}
+
+.aspect .card a:hover {
+    color: #38ADBD;
+}
+
+.industry {
+    background: url(./src/bg.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width:1100px) {
+
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header nav button {
+        margin-left: 20px;
+        padding: 3px 8px;
+        border-radius: 2px;
+        border: 1px solid rgb(222, 218, 218);
+        background-color: transparent;
+        display: block;
+    }
+
+    header nav button:hover {
+        background-color: rgb(221, 213, 213);
+    }
+
+    header nav button .material-symbols-outlined {
+        font-size: 22px;
+        color: gray;
+    }
+
+    header nav .call-icon {
+        display: block;
+    }
+
+    header .logo {
+        width: 150px;
+    }
+
+    .aspect .cards {
+        flex-wrap: wrap;
+    }
+
+    .aspect .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    header .logo {
+        width: 140px;
+        padding: 10px 0;
+    }
+
+    .about .icons {
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .clientNeeds .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:530px) {
+    main .content-wrapper h1 {
+        font-size: 29px;
+    }
+
+    main .content-wrapper p {
+        font-size: 20px;
+    }
+
+    .about .wrapper h2,
+    .aspect h2,
+    .clientNeeds .content h2,
+    .services h2 {
+        font-size: 28px;
+    }
+
+    .about .wrapper p,
+    .services p {
+        font-size: 16px;
+    }
+
+    .clientNeeds .content p {
+        font-size: 16px;
+    }
+
+
+    .clientNeeds .card h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:393px) {
+    main .content-wrapper .btn button {
+        padding: 10px;
+    }
+
+    .content-wrapper,
+    .clientNeeds .wrapper,
+    .about .wrapper,
+    .header-wrapper,
+    .services,
+    .aspect .wrapper {
+        padding-inline: 16px;
+    }
+
+
+    .sub-heading {
+        line-height: 35px;
+    }
+
+    main .content-wrapper h1 {
+        font-size: 27px;
+    }
+
+    .about .wrapper h2,
+    .aspect h2,
+    .clientNeeds .content h2,
+    .services h2 {
+        font-size: 25px;
+    }
+
+    .aspect .card h3 {
+        margin-left: 16px;
+        font-size: 18px;
+    }
+
+    .aspect .card {
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .aspect .card p {
+        font-size: 14px;
+    }
+}
