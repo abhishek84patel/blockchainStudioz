@@ -716,6 +716,8 @@ footer p {
     text-align: center;
     color: #fff;
     padding-bottom: 10px;
+    padding-inline: 30px;
+    font-family: var(--p-font);
 }
 
 
@@ -770,7 +772,7 @@ footer p {
     }
 
     .aspect .card {
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
 
@@ -840,6 +842,9 @@ footer p {
 
     .clientNeeds .card h3 {
         font-size: 20px;
+    }.aspect .card{
+        width: 90%;
+        margin: auto;
     }
 }
 
