@@ -8,8 +8,14 @@
     --p-color: #464646;
     --p-font: Jaldi, sans-serif;
     --pinkColor: #fd746c;
+
 }
 
+
+::selection {
+    background-color: #1d717c;
+    color: white;
+}
 
 
 
@@ -176,7 +182,7 @@ main .content-wrapper p {
 
 main #particles-js {
     width: 100%;
-    height: 100%;
+    height: 60vh;
 }
 
 main .content-wrapper .btn {
@@ -188,7 +194,7 @@ main .content-wrapper .btn button {
     padding: 15px 35px;
     color: white;
     text-transform: capitalize;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background-color: var(--pinkColor);
     border-radius: 5px;
     text-transform: uppercase;
@@ -202,12 +208,13 @@ main .content-wrapper h1 {
 }
 
 main .content-wrapper .btn button:hover {
-    background: linear-gradient(to right, #ff9068, #fd746c);
+    background: linear-gradient(75deg, rgba(255, 140, 105, 1) 14%, rgba(254, 118, 108, 1) 57%);
 
 }
 
+
 main .content-wrapper .btn button:focus {
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 nav ul li .material-symbols-outlined {
@@ -414,12 +421,12 @@ nav ul li .material-symbols-outlined {
     flex-wrap: wrap;
     gap: 40px;
     margin-top: 60px;
-
+    justify-content: center;
 }
 
 .aspect .card {
     background-color: #F4F4F4;
-    padding: 40px 30px;
+    padding: 40px 40px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -455,7 +462,7 @@ nav ul li .material-symbols-outlined {
 }
 
 .aspect .card img {
-    width: 50px;
+    width: 57px;
     object-fit: contain;
 }
 
@@ -503,31 +510,56 @@ nav ul li .material-symbols-outlined {
 }
 
 .industry .box {
-    height: 200px;
+    height: 170px;
+}
+
+.circle-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 90px;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.circle-wrapper::after {
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+
+    z-index: -1;
+    top: 36%;
+
 }
 
 .circles {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 50px 0 50px 0;
+    justify-content: center;
+
+    gap: 90px;
+
 }
 
 .cir {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: #38ADBD;
     position: relative;
     flex-shrink: 0;
     transition: all ease 0.2s;
+    user-select: none;
 }
-.cir:hover{
+
+.cir:hover {
     background-color: var(--pinkColor);
     cursor: pointer;
 }
-.cir:hover .arrow{
+
+.cir:hover .arrow {
     color: var(--pinkColor);
     transition: all ease 0.2s;
 }
@@ -550,13 +582,13 @@ nav ul li .material-symbols-outlined {
 
 .incircle {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 
     border: 5px solid white;
     border-radius: 50%;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .incircle span {
@@ -567,7 +599,135 @@ nav ul li .material-symbols-outlined {
     transform: translate(50%, -50%);
 }
 
-@media (max-width:1100px) {
+/* portfolio section have start */
+.portfolio {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.portfolio .cards img {
+    width: 100%;
+    object-fit: contain;
+    height: 50px;
+
+}
+
+.portfolio .wrapper {
+    max-width: 1140px;
+    padding: 50px 30px 50px 30px;
+    margin: 0 auto;
+}
+
+.portfolio h2 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.portfolio h2 span {
+    color: #2C56A1;
+}
+
+.portfolio .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 20px;
+    margin-bottom: 25px;
+}
+
+.portfolio .card {
+    width: 160px;
+    border-radius: 10px;
+    padding: 40px 15px;
+    box-shadow: 0 0 7px 1px #80808063;
+    transition: all ease-in-out 0.1s;
+}
+
+.portfolio .card:hover {
+    transform: translateY(-10px);
+}
+
+footer .top {
+    background-color: #131212;
+    padding: 40px 0;
+    color: white;
+}
+
+footer .top ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: auto;
+}
+
+footer .top ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .top ul li:hover {
+    color: #38ADBD;
+}
+
+footer .wrap {
+
+    background-color: #080808;
+}
+
+footer .bot {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    padding: 20px 30px;
+    margin: auto;
+}
+
+footer .bot ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+footer .bot ul li {
+    color: white;
+}
+
+footer .bot ul:nth-child(1) li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+    font-family: var(--p-font);
+    text-decoration: none;
+}
+
+footer .bot ul:nth-child(2) li a {
+    text-decoration: none;
+    color: inherit
+}
+
+footer .bot ul li:hover {
+    color: #fd746c;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1110px) {
 
 
     header nav ul {
@@ -610,7 +770,12 @@ nav ul li .material-symbols-outlined {
     }
 
     .aspect .card {
-        width: 100%;
+        width: 90%;
+        margin: auto;
+    }
+
+    .circle-wrapper::after {
+        content: unset;
     }
 }
 
@@ -629,6 +794,22 @@ nav ul li .material-symbols-outlined {
     .clientNeeds .card {
         width: 100%;
     }
+
+    .circle-wrapper {
+        justify-content: space-evenly;
+    }
+
+    .circles {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    footer .top ul,
+    footer .bot ul:nth-child(1) {
+        row-gap: 17px;
+        flex-direction: column;
+    }
+
 }
 
 @media (max-width:530px) {
@@ -683,6 +864,7 @@ nav ul li .material-symbols-outlined {
 
     main .content-wrapper h1 {
         font-size: 27px;
+        text-align: center;
     }
 
     .about .wrapper h2,
@@ -690,6 +872,7 @@ nav ul li .material-symbols-outlined {
     .clientNeeds .content h2,
     .services h2 {
         font-size: 25px;
+        text-align: center;
     }
 
     .aspect .card h3 {
@@ -698,7 +881,7 @@ nav ul li .material-symbols-outlined {
     }
 
     .aspect .card {
-        padding: 25px 15px;
+        padding: 25px;
         gap: 15px;
     }
 
